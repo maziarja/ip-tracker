@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Rubik", sans-serif;
+}
+.main {
+  position: relative;
+}
+.section-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/images/pattern-bg-desktop.png);
+  padding-bottom: 12rem;
+}
+h1 {
+  font-size: 3.15rem;
+  font-weight: 500;
+  color: #fff;
+  padding-top: 3rem;
+}
+.search {
+  width: 38.5%;
+  display: grid;
+  grid-template-columns: 8.5fr 1fr;
+  margin-top: 2.7rem;
+}
+input {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  width: 100%;
+  padding: 2.2rem 3.4rem 2rem 2.2rem;
+  border: none;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  outline: none;
+}
+input::placeholder {
+  font-size: 1.8rem;
+  color: hsl(0, 0%, 59%);
+  letter-spacing: 0.3px;
+  justify-self: end;
+}
+.btn {
+  border: none;
+  cursor: pointer;
+  background-color: #111;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+
+.results-container {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50.3%, 42.5%);
+  width: 77.1%;
+  height: 16rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: start;
+  align-items: start;
+  gap: 6rem;
+  background-color: #fff;
+  margin-top: 4.8rem;
+  padding: 3.2rem 3.5rem 3.2rem 3.5rem;
+  border-radius: 1.3rem;
+  z-index: 999;
+}
+.result-container {
+  position: relative;
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.result-container:not(:last-child):after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 150%;
+  transform: translate(100%, 14%);
+  border-left: 1px solid hsl(0, 0%, 59%);
+  height: 7.3rem;
+}
+.title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 59%);
+  margin-top: 0.5rem;
+}
+.result {
+  font-size: 2rem;
+  font-weight: 500;
+  color: hsl(0, 0%, 17%);
+  margin-top: 1.2rem;
+}
+.postal-code {
+  font-size: 2rem;
+  font-weight: 500;
+  color: hsl(0, 0%, 17%);
+}
+#map {
+  background-color: hsl(0, 0%, 59%);
+  height: 100vh;
+}
+
+.error-container {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50.3%, 42.5%);
+  width: 77.1%;
+  height: 16rem;
+  background-color: #fff;
+  margin-top: 4.8rem;
+  padding: 3.2rem 3.5rem 3.2rem 3.5rem;
+  border-radius: 1.3rem;
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.error-msg {
+  font-size: 2.6rem;
+  color: hsl(0, 0%, 17%);
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}

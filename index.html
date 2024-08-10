@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <link rel="stylesheet" href="src/css/queries.css" />
+
+    <script defer type="module" src="/src/js/controler.js"></script>
+    <title>Frontend Mentor | IP Address Tracker</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="section-top">
+        <header>
+          <h1>IP Address Tracker</h1>
+        </header>
+        <form class="search">
+          <input
+            class="input"
+            type="text"
+            placeholder="Search for any IP address or domain"
+          />
+          <button class="btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
+              <path
+                fill="none"
+                stroke="#FFF"
+                stroke-width="3"
+                d="M2 1l6 6-6 6"
+              />
+            </svg>
+          </button>
+        </form>
+      </section>
+      <div class="error-container hidden">
+        <p class="error-msg"></p>
+      </div>
+      <div class="results-container">
+        <div class="result-container">
+          <p class="title">IP Address</p>
+          <p class="result result-ip"></p>
+        </div>
+        <div class="result-container">
+          <p class="title">Location</p>
+          <p class="result result-location">
+            <p class="postal-code"></p>
+          </p>
+        </div>
+        <div class="result-container">
+          <p class="title">Timezone</p>
+          <p class="result result-timezone"><span></span></p>
+        </div>
+        <div class="result-container">
+          <p class="title">ISP</p>
+          <p class="result result-isp"></p>
+        </div>
+      </div>
+      <div class="map" id="map"></div>
+    </main>
+  </body>
+</html>
