@@ -13,7 +13,9 @@ const ipTracker = function () {
 
   const loadMap = function (latlng) {
     if (!map) {
-      map = L.map("map").setView(latlng, MAP_ZOOM);
+      map = L.map("map", {
+        zoomControl: false,
+      }).setView(latlng, MAP_ZOOM);
       L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution:
           '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
