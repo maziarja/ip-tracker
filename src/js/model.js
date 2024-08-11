@@ -1,6 +1,7 @@
 import { API_KEY, API_URL, TIME_OUT_SEC } from "./config";
 import { getJSON, timeout } from "./helper";
-
+import dotenv from "dotenv";
+dotenv.config();
 const formatData = function (getData) {
   return {
     ip: getData.ip,
@@ -14,7 +15,7 @@ const formatData = function (getData) {
 export const getIp = async function () {
   try {
     const getData = await Promise.race([
-      getJSON(`${API_URL}?${API_KEY}`),
+      getJSON(`${API_URL}?apiKey=${API_KEY}`),
       timeout(TIME_OUT_SEC),
     ]);
     const data = formatData(getData);
@@ -27,7 +28,7 @@ export const getIp = async function () {
 export const sendIp = async function (ip) {
   try {
     const getData = await Promise.race([
-      getJSON(`${API_URL}?${API_KEY}&ipAddress=${ip}`),
+      getJSON(`${API_URL}?apiKey=${API_KEY}&ipAddress=${ip}`),
       timeout(TIME_OUT_SEC),
     ]);
     const data = formatData(getData);
