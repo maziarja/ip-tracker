@@ -1,7 +1,6 @@
 import { API_KEY, API_URL, TIME_OUT_SEC } from "./config";
 import { getJSON, timeout } from "./helper";
-import dotenv from "dotenv";
-dotenv.config();
+
 const formatData = function (getData) {
   return {
     ip: getData.ip,

@@ -6,6 +6,8 @@ import "regenerator-runtime/runtime";
 import L, { icon, Renderer } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { MAP_ZOOM } from "./config.js";
+import dotenv from "dotenv";
+dotenv.config();
 
 const ipTracker = function () {
   let map;
